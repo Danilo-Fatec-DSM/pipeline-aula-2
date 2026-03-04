@@ -2,8 +2,8 @@ name: Pipeline Aula 02
 
 on:
   push:
-    branchs:
-      -main
+    branchs:          
+      -main          
 
 jobs: 
 
@@ -25,4 +25,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Rodar testes
-        run: pytest
+        run: pytest                    
