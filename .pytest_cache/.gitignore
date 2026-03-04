@@ -1,4 +1,4 @@
 # Created by pytest automatically.
 .venv/
 __pycache__/
-*.pyc
+*git add.pyc
