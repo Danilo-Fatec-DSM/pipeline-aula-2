@@ -32,6 +32,6 @@ jobs:
     needs: build
     environment:
       name: production
-    stpes: 
+    steps: 
       - name: Deploy
         run: echo "Executando o deploy"
