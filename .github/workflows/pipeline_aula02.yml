@@ -26,6 +26,22 @@ jobs:
 
       - name: Rodar testes
         run: pytest     
+  
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout código
+        uses: actions/checkout@v3
+        
+      - name: Gerar arterfato ZIP
+        run:  zip -r pipeline-demo.zip
+
+      - name: Publicar arterfato
+        uses: actions/upload-artifact@v3
+        with: 
+          name: codigo-buildado
+          path: pipeline-demo.zip
 
   deploy:
     runs-on: ubuntu-latest
