@@ -26,12 +26,12 @@ jobs:
 
       - name: Rodar testes
         run: pytest     
-
-deploy:
-  runs-on: ubuntu-latest
-  needs: build
-  enviroment:
-    name: production
-  stpes: 
-    - name: Deploy
-      run: echo "Executando o deploy"
+        
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: production
+    stpes: 
+      - name: Deploy
+        run: echo "Executando o deploy"
