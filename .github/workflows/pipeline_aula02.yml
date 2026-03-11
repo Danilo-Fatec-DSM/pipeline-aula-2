@@ -25,4 +25,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Rodar testes
-        run: pytest                    
+        run: pytest     
+
+deploy:
+  runs-on: ubuntu-latest
+  needs: test
+  enviroment:
+    production: production               
