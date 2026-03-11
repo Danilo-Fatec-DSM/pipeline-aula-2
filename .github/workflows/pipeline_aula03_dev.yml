@@ -3,8 +3,11 @@ name: Pipeline Aula 02
 on:
   push:
     branchs:          
-      -dev          
-
+      -dev   
+  pull_request:
+    branchs: 
+      -main      
+      -dev
 jobs: 
 
   build:
